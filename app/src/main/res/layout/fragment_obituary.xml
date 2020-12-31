@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Fragment_home">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/obituary_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="부고함"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/write_obituary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/obituary_textView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:layout_margin="10dp"
+                        android:text="부고제작"
+                        android:textColor="@color/jinBlack" />
+
+                    <ImageView
+                        android:id="@+id/obituary_imageView1"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_launcher_foreground" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/obituary_line1"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layerType="software"
+                android:src="@drawable/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/obituary_textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:text="받은 부고"
+                        android:textColor="@color/jinBlack" />
+
+                    <ImageView
+                        android:id="@+id/obituary_imageView2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_launcher_foreground" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/obituary_line2"
+                android:layout_width="match_parent"
+                android:layout_height="7dp"
+                android:layerType="software"
+                android:src="@drawable/line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/obituary_textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:text="만든 부고"
+                        android:textColor="@color/jinBlack" />
+
+                    <ImageView
+                        android:id="@+id/obituary_imageView3"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_launcher_foreground" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

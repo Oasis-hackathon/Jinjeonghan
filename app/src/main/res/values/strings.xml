@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Hackathon</string>
+    <string name="app_name">hackathon</string>
+    <string-array name="relation">
+        <item>부</item>
+        <item>모</item>
+        <item>형제</item>
+    </string-array>
 </resources>
