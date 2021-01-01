@@ -45,5 +45,8 @@ public class Write_obituaryActivity extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {}
         });
+
+        // 제작버튼
+        //Button btn_finish = findViewById(R.id.ob_finish);
     }
 }
