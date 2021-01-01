@@ -3,6 +3,7 @@ package org.techtown.hackathon;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -22,6 +23,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // 로그인 정보 받아옴
+        Intent intent = getIntent();
+        String userID = intent.getStringExtra("userID");
+        String userName = intent.getStringExtra("userName");
+        Toast.makeText(getApplicationContext(), userID, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), userName, Toast.LENGTH_SHORT).show();
+
+        // 프래그먼트 관리
         fragmentHome = new Fragment_home();
         fragmentObituary = new Fragment_obituary();
         fragmentMemorial = new Fragment_memorial();
