@@ -12,7 +12,8 @@ public class Fragment_memorial extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_memorial, container, false);
+        ViewGroup frag = (ViewGroup) inflater.inflate(R.layout.fragment_memorial, container, false);
+        return frag;
     }
 
 }

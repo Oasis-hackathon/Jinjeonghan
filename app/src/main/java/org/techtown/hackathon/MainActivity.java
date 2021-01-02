@@ -2,6 +2,8 @@ package org.techtown.hackathon;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +13,9 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private FragmentManager fragmentManager;
+    private FragmentTransaction fragmentTransaction;
 
     Fragment_home fragmentHome;
     Fragment_obituary fragmentObituary;
@@ -37,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putString("id", userID);
         bundle.putString("name", userName);
-        fragmentObituary.setArguments(bundle); // 정보 보내기
+        fragmentHome.setArguments(bundle);// 정보 보내기
+        //fragmentObituary.setArguments(bundle);
 
 
 
@@ -49,26 +55,31 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.tab1:
+                        fragmentHome.setArguments(bundle);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.container, fragmentHome).commit();
 
                         return true;
                     case R.id.tab2:
+                        fragmentObituary.setArguments(bundle);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.container, fragmentObituary).commit();
 
                         return true;
                     case R.id.tab3:
+                        fragmentMemorial.setArguments(bundle);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.container, fragmentMemorial).commit();
 
                         return true;
                     case R.id.tab4:
+                        fragmentCalendar.setArguments(bundle);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.container, fragmentCalendar).commit();
 
                         return true;
                     case R.id.tab5:
+                        fragmentMypage.setArguments(bundle);
                         getSupportFragmentManager().beginTransaction()
                                 .replace(R.id.container, fragmentMypage).commit();
 
@@ -79,4 +90,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    // 프래그먼트 교체 -> 하단바가 안바뀌는 문제
+    /*public void setFragment(int n) {
+        fragmentManager =  getSupportFragmentManager();
+        fragmentTransaction = fragmentManager.beginTransaction();
+        switch(n) {
+            case 0:
+                fragmentTransaction.replace(R.id.container, fragmentObituary).commit();
+                break;
+        }
+    }*/
 }
