@@ -23,19 +23,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // 로그인 정보 받아옴
-        Intent intent = getIntent();
-        String userID = intent.getStringExtra("userID");
-        String userName = intent.getStringExtra("userName");
-        Toast.makeText(getApplicationContext(), userID, Toast.LENGTH_SHORT).show();
-        Toast.makeText(getApplicationContext(), userName, Toast.LENGTH_SHORT).show();
-
         // 프래그먼트 관리
         fragmentHome = new Fragment_home();
         fragmentObituary = new Fragment_obituary();
         fragmentMemorial = new Fragment_memorial();
         fragmentCalendar = new Fragment_calendar();
         fragmentMypage = new Fragment_mypage();
+
+        // 로그인 정보 받아옴
+        Intent intent = getIntent();
+        String userID = intent.getStringExtra("userID");
+        String userName = intent.getStringExtra("userName");
+        Bundle bundle = new Bundle();
+        bundle.putString("id", userID);
+        bundle.putString("name", userName);
+        fragmentObituary.setArguments(bundle); // 정보 보내기
+
+
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentHome).commit();
 

@@ -87,7 +87,7 @@
                         android:layout_height="20dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="받은 부고"
+                        android:text="만든 부고"
                         android:textColor="@color/jinBlack" />
 
                     <ImageView
@@ -99,6 +99,14 @@
                         android:src="@drawable/ic_launcher_foreground" />
 
                 </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/make_ob"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
             </LinearLayout>
 
             <ImageView
@@ -125,7 +133,7 @@
                         android:layout_height="20dp"
                         android:layout_margin="10dp"
                         android:layout_weight="1"
-                        android:text="만든 부고"
+                        android:text="받은 부고"
                         android:textColor="@color/jinBlack" />
 
                     <ImageView

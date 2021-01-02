@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "933691572006",
+    "project_id": "jinjeonghan-298fc",
+    "storage_bucket": "jinjeonghan-298fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:933691572006:android:5d3fb3885c3d75708f4be7",
+        "android_client_info": {
+          "package_name": "org.techtown.hackathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "933691572006-j2q3rug3clhbuomd81k7ojmeihb75l8q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKd5A91QuI81R2I6-olM2MS-QaNNtQx9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "933691572006-j2q3rug3clhbuomd81k7ojmeihb75l8q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

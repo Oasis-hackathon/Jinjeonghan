@@ -23,7 +23,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginHorizontal="70dp"
-
             android:text="부고 제작" />
     </LinearLayout>
 
