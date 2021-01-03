@@ -22,7 +22,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class Fragment_home extends Fragment {
     RecyclerView mRecyclerView = null ;
+    RecyclerView mRecyclerView2 = null ;
     Obituary_RecyclerAdapter mAdapter = null ;
+    Calendar_RecyclerAdapter mAdapter2 = null ;
     ArrayList<Obituary_RecyclerItem> mList = new ArrayList<Obituary_RecyclerItem>(); // 객체를 담을 어레이 리스트(어댑터 쪽으로)
 
     private FirebaseDatabase database;
@@ -42,8 +44,14 @@ public class Fragment_home extends Fragment {
         mRecyclerView = frag.findViewById(R.id.recycler_home) ;
         mRecyclerView.setHasFixedSize(true); // 리사이클러뷰 기존 성능 강화
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity())); // 리사이클러뷰에 LinearLayoutManager 지정. (vertical)
-        database = FirebaseDatabase.getInstance(); // firebase 데이터베이스 연동
 
+        mRecyclerView2 = frag.findViewById(R.id.recycler_home2) ;
+        mRecyclerView2.setHasFixedSize(true);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        layoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
+        mRecyclerView2.setLayoutManager(layoutManager);
+
+        database = FirebaseDatabase.getInstance(); // firebase 데이터베이스 연동
         databaseReference = database.getReference(DBheader); // DB 테이블 연결
         databaseReference.child("부고함").addValueEventListener(new ValueEventListener() {
             @Override
@@ -55,6 +63,7 @@ public class Fragment_home extends Fragment {
                     mList.add(info); // 담은 데이터들을 배열리스트에 넣고 리사이클러뷰로 보낼 준비
                 }
                 mAdapter.notifyDataSetChanged(); // 리스트 저장 및 새로고침
+                mAdapter2.notifyDataSetChanged();
             }
 
             @Override
@@ -67,6 +76,9 @@ public class Fragment_home extends Fragment {
         // 리사이클러뷰에 Adapter 객체 지정.
         mAdapter = new Obituary_RecyclerAdapter(mList);
         mRecyclerView.setAdapter(mAdapter);
+
+        mAdapter2 = new Calendar_RecyclerAdapter(mList);
+        mRecyclerView2.setAdapter(mAdapter2);
 
         // 부고함 눌렀을 때 부고함으로 가기(하단바가 안바뀌는 문제있음)
         /*LinearLayout go_ob = frag.findViewById(R.id.go_ob);

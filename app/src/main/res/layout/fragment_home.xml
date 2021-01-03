@@ -117,19 +117,25 @@
                         android:id="@+id/home_textView7"
                         android:layout_width="wrap_content"
                         android:layout_height="20dp"
-                        android:layout_weight="1"
                         android:layout_margin="10dp"
-                        android:textColor="@color/jinBlack"
-                        android:text="다가오는 일정" />
+                        android:layout_weight="1"
+                        android:text="다가오는 일정"
+                        android:textColor="@color/jinBlack" />
 
                     <ImageView
                         android:id="@+id/home_imageView2"
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:layout_weight="1"
                         android:layout_gravity="center"
+                        android:layout_weight="1"
                         android:src="@drawable/ic_launcher_foreground" />
+
                 </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_home2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
 
                 <ImageView
                     android:id="@+id/home_line2"

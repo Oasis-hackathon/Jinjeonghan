@@ -24,18 +24,22 @@ public class Write_obituaryActivity extends AppCompatActivity {
         public String d_name;
         public String d_age;
         public String d_date;
-        public String d_go;
+        public String d_go_year;
+        public String d_go_month;
+        public String d_go_day;
         public String location;
 
         public Write(String t_relation, String t_name, String t_number, String d_name,
-                     String d_age, String d_date, String d_go, String location) {
+                     String d_age, String d_date, String d_go_year, String d_go_month, String d_go_day, String location) {
             this.t_relation = t_relation;
             this.t_name = t_name;
             this.t_number = t_number;
             this.d_name = d_name;
             this.d_age = d_age;
             this.d_date = d_date;
-            this.d_go = d_go;
+            this.d_go_year = d_go_year;
+            this.d_go_month = d_go_month;
+            this.d_go_day = d_go_day;
             this.location = location;
         }
     }
@@ -87,12 +91,14 @@ public class Write_obituaryActivity extends AppCompatActivity {
                 EditText x_d_name = findViewById(R.id.Name_d_editText);
                 EditText x_d_age = findViewById(R.id.age_d_editText);
                 EditText x_d_date = findViewById(R.id.date_editText);
-                EditText x_d_go = findViewById(R.id.date_editText2);
+                EditText x_d_go_year = findViewById(R.id.date_editText3);
+                EditText x_d_go_month = findViewById(R.id.date_editText4);
+                EditText x_d_go_day = findViewById(R.id.date_editText2);
                 EditText x_location = findViewById(R.id.location_editText);
 
                 Write w = new Write(x_t_relation.getSelectedItem().toString(), x_t_name.getText().toString(), x_t_number.getText().toString(),
                         x_d_name.getText().toString(), x_d_age.getText().toString(), x_d_date.getText().toString(),
-                        x_d_go.getText().toString(), x_location.getText().toString());
+                        x_d_go_year.getText().toString(), x_d_go_month.getText().toString(), x_d_go_day.getText().toString(), x_location.getText().toString());
                 database = FirebaseDatabase.getInstance();
                 databaseReference = database.getReference();
                 databaseReference.child(id).child("부고함").push().setValue(w);

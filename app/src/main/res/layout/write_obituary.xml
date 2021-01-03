@@ -209,6 +209,28 @@
                     android:orientation="horizontal">
 
                     <EditText
+                        android:id="@+id/date_editText3"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/write_text"
+                        android:gravity="center"
+                        android:hint="년" />
+
+                    <EditText
+                        android:id="@+id/date_editText4"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/write_text"
+                        android:gravity="center"
+                        android:hint="월" />
+
+                    <EditText
                         android:id="@+id/date_editText2"
                         android:layout_width="40dp"
                         android:layout_height="20dp"
@@ -217,7 +239,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/write_text"
                         android:gravity="center"
-                        android:hint="날짜" />
+                        android:hint="일" />
 
                 </LinearLayout>
 

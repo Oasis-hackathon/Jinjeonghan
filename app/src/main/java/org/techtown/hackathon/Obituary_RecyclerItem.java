@@ -7,7 +7,9 @@ public class Obituary_RecyclerItem {
     private String d_name;
     private String d_age;
     private String d_date;
-    private String d_go;
+    private String d_go_year;
+    private String d_go_month;
+    private String d_go_day;
     private String location;
 
     public String getT_number() {
@@ -58,13 +60,6 @@ public class Obituary_RecyclerItem {
         this.d_date = d_date;
     }
 
-    public String getD_go() {
-        return d_go;
-    }
-
-    public void setD_go(String d_go) {
-        this.d_go = d_go;
-    }
 
     public String getLocation() {
         return location;
@@ -72,5 +67,29 @@ public class Obituary_RecyclerItem {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public String getD_go_year() {
+        return d_go_year;
+    }
+
+    public void setD_go_year(String d_go_year) {
+        this.d_go_year = d_go_year;
+    }
+
+    public String getD_go_month() {
+        return d_go_month;
+    }
+
+    public void setD_go_month(String d_go_month) {
+        this.d_go_month = d_go_month;
+    }
+
+    public String getD_go_day() {
+        return d_go_day;
+    }
+
+    public void setD_go_day(String d_go_day) {
+        this.d_go_day = d_go_day;
     }
 }

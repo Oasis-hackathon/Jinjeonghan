@@ -73,7 +73,9 @@ public class Obituary_RecyclerAdapter extends RecyclerView.Adapter<Obituary_Recy
                         String d_name = item.getD_name();
                         String d_age = item.getD_age();
                         String d_date = item.getD_date();
-                        String d_go = item.getD_go();
+                        String d_go_year = item.getD_go_year();
+                        String d_go_month = item.getD_go_month();
+                        String d_go_day = item.getD_go_day();
                         String location = item.getLocation();
 
                         Intent intent = new Intent(v.getContext(), Obituary_page.class);
@@ -83,7 +85,9 @@ public class Obituary_RecyclerAdapter extends RecyclerView.Adapter<Obituary_Recy
                         intent.putExtra("d_name", ""+d_name);
                         intent.putExtra("d_age", ""+d_age);
                         intent.putExtra("d_date", ""+d_date);
-                        intent.putExtra("d_go", ""+d_go);
+                        intent.putExtra("d_go_year", ""+d_go_year);
+                        intent.putExtra("d_go_month", ""+d_go_month);
+                        intent.putExtra("d_go_day", ""+d_go_day);
                         intent.putExtra("location", ""+location);
                         v.getContext().startActivity(intent);
                     }

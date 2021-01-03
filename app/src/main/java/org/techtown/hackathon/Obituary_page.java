@@ -20,7 +20,9 @@ public class Obituary_page extends AppCompatActivity {
         String d_name = intent.getStringExtra("d_name");
         String d_age = intent.getStringExtra("d_age");
         String d_date = intent.getStringExtra("d_date");
-        String d_go = intent.getStringExtra("d_go");
+        String d_go_year = intent.getStringExtra("d_go_year");
+        String d_go_month = intent.getStringExtra("d_go_month");
+        String d_go_day = intent.getStringExtra("d_go_day");
         String location = intent.getStringExtra("location");
 
         TextView tv_relation = findViewById(R.id.relation_t_Text);
@@ -34,7 +36,7 @@ public class Obituary_page extends AppCompatActivity {
         tv_name.setText(t_name);
         tvd_name_age.setText("故 " + d_name + " (" + d_age +"세)");
         tvd_name_date.setText("故 " + d_name + "님께서 " + d_date);
-        tvd_date.setText(d_go);
+        tvd_date.setText(d_go_year + "년 " + d_go_month + "월 " + d_go_day + "일");
         tv_location.setText(location);
     }
 }
