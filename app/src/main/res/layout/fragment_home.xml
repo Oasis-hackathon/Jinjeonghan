@@ -13,8 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="10dp"
-        android:orientation="vertical">
+        android:layout_margin="10dp">
 
         <TextView
             android:id="@+id/home_logo"
@@ -86,12 +85,11 @@
 
                 </LinearLayout>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recycler_home"
+                <ImageView
+                    android:id="@+id/imageView5"
                     android:layout_width="match_parent"
-                    android:layout_height="140dp">
-
-                </androidx.recyclerview.widget.RecyclerView>
+                    android:layout_height="190dp"
+                    android:src="@drawable/ob_come" />
 
                 <ImageView
                     android:id="@+id/home_line"
@@ -157,6 +155,14 @@
                     android:layout_marginBottom="20dp"
                     android:orientation="horizontal">
 
+                    <ImageView
+                        android:id="@+id/home_imageView11"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_launcher_foreground" />
+
                     <TextView
                         android:id="@+id/home_textView10"
                         android:layout_width="wrap_content"
@@ -166,14 +172,12 @@
                         android:text="나의 추모관"
                         android:textColor="@color/jinBlack" />
 
-                    <ImageView
-                        android:id="@+id/home_imageView11"
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:src="@drawable/ic_launcher_foreground" />
                 </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_home3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
 
             </LinearLayout>
         </LinearLayout>

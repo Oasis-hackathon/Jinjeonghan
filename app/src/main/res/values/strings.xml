@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name">hackathon</string>
     <string-array name="relation">
+        <item>배우자</item>
+        <item>아들</item>
+        <item>딸</item>
+        <item>손자(녀)</item>
         <item>부</item>
         <item>모</item>
-        <item>형제</item>
+        <item>직접입력</item>
     </string-array>
 </resources>

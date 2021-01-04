@@ -14,7 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Write_obituaryActivity extends AppCompatActivity {
+public class Make_obituaryActivity extends AppCompatActivity {
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
     public class Write {

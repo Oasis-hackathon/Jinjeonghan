@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/memorial_logo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="추모관"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/memo_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/profile_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/memo_page_BGM"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/write_text"
+                    android:fontFamily="@font/kopubworld_dotum_medium"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="10dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="10dp"
+                    android:text="BGM"
+                    android:textColor="@color/jinBlack" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/memo_page_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kopubworld_dotum_bold"
+                        android:gravity="center"
+                        android:text="이름"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/memo_page_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/kopubworld_dotum_light"
+                        android:gravity="center"
+                        android:text="날짜"
+                        android:textSize="15sp" />
+
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="20dp"
+                        app:srcCompat="@drawable/profile_text" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E1DFDF"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="70dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/button5"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/kopubworld_dotum_light"
+                            android:gravity="center"
+                            android:text="헌화하기"
+                            android:textColor="@color/jinBlack" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/button6"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/textView11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/kopubworld_dotum_light"
+                            android:gravity="center"
+                            android:text="입장하기"
+                            android:textColor="@color/jinBlack" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/button7"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_weight="1"
+                            android:backgroundTint="@color/gray" />
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/kopubworld_dotum_light"
+                            android:gravity="center"
+                            android:text="초대하기"
+                            android:textColor="@color/jinBlack" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/kopubworld_dotum_medium"
+                        android:text="프로필"
+                        android:textColor="@color/jinBlack" />
+
+                    <TextView
+                        android:id="@+id/memo_page_phrases"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:fontFamily="@font/kopubworld_dotum_light"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="30dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="30dp"
+                        android:text="글"
+                        android:textColor="@color/jinBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/kopubworld_dotum_medium"
+                        android:text="편지쓰기"
+                        android:textColor="@color/jinBlack" />
+
+                    <TextView
+                        android:id="@+id/memo_page_write"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:fontFamily="@font/kopubworld_dotum_light"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="30dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="30dp"
+                        android:text="저장된 편지글이 없습니다."
+                        android:gravity="center"
+                        android:textColor="@color/jinBlack" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/kopubworld_dotum_medium"
+                        android:text="추억앨범"
+                        android:textColor="@color/jinBlack" />
+
+                    <TextView
+                        android:id="@+id/memo_page_al"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:fontFamily="@font/kopubworld_dotum_light"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="30dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="30dp"
+                        android:text="저장된 앨범이 없습니다."
+                        android:gravity="center"
+                        android:textColor="@color/jinBlack" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

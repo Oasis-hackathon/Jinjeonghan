@@ -1,7 +1,11 @@
 package org.techtown.hackathon;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,18 +29,45 @@ public class Obituary_page extends AppCompatActivity {
         String d_go_day = intent.getStringExtra("d_go_day");
         String location = intent.getStringExtra("location");
 
-        TextView tv_relation = findViewById(R.id.relation_t_Text);
         TextView tv_name = findViewById(R.id.name_t_Text);
-        TextView tvd_name_age = findViewById(R.id.textView2);
-        TextView tvd_name_date = findViewById(R.id.textView3);
-        TextView tvd_date = findViewById(R.id.p_date_Text);
-        TextView tv_location = findViewById(R.id.p_location_Text);
+        TextView tvd_top = findViewById(R.id.textView2);
+        TextView tvd_date = findViewById(R.id.d_day_Text);
+        TextView tv_location = findViewById(R.id.d_location_Text);
 
-        tv_relation.setText(t_relation);
         tv_name.setText(t_name);
-        tvd_name_age.setText("故 " + d_name + " (" + d_age +"세)");
-        tvd_name_date.setText("故 " + d_name + "님께서 " + d_date);
+        tvd_top.setText("故 " + d_name + "님께서 " + d_date);
         tvd_date.setText(d_go_year + "년 " + d_go_month + "월 " + d_go_day + "일");
         tv_location.setText(location);
+
+        // 배경 색상
+        Button btn_white = findViewById(R.id.btn_white1);
+        Button btn_brown1= findViewById(R.id.btn_brown1);
+        Button btn_brown2 = findViewById(R.id.btn_brown2);
+        LinearLayout back_color = findViewById(R.id.back_color);
+
+        btn_white.setOnClickListener(new View.OnClickListener() {
+
+            @SuppressLint("ResourceAsColor")
+            @Override
+            public void onClick(View v) {
+                back_color.setBackgroundColor(getResources().getColor(R.color.white));
+            }
+        });
+        btn_brown1.setOnClickListener(new View.OnClickListener() {
+
+            @SuppressLint("ResourceAsColor")
+            @Override
+            public void onClick(View v) {
+                back_color.setBackgroundColor(getResources().getColor(R.color.brown1));
+            }
+        });
+        btn_brown2.setOnClickListener(new View.OnClickListener() {
+
+            @SuppressLint("ResourceAsColor")
+            @Override
+            public void onClick(View v) {
+                back_color.setBackgroundColor(getResources().getColor(R.color.brown2));
+            }
+        });
     }
 }

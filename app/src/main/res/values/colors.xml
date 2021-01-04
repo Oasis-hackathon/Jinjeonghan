@@ -13,4 +13,8 @@
     <color name="jinBlack">#242424</color>
     <color name="softBlack">#7E7E7E</color>
     <color name="gray">#CCCACA</color>
+    <color name="yellow">#F6D163</color>
+    <color name="green">#75B877</color>
+    <color name="brown2">#674712</color>
+    <color name="brown1">#AC8D5A</color>
 </resources>

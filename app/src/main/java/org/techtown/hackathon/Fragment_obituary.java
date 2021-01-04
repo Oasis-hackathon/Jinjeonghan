@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -77,7 +76,7 @@ public class Fragment_obituary extends Fragment {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Write_obituaryActivity.class);
+                Intent intent = new Intent(getActivity(), Make_obituaryActivity.class);
                 intent.putExtra("id", ""+id);
                 intent.putExtra("name", ""+name);
                 startActivity(intent);
