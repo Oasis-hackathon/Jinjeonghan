@@ -17,4 +17,8 @@
     <color name="green">#75B877</color>
     <color name="brown2">#674712</color>
     <color name="brown1">#AC8D5A</color>
+    <color name="background">#F3F3F3</color>
+    <color name="mediumviewtext">#6B6B6B</color>
+    <color name="Boldviewtext">#383838</color>
+    <color name="lightviewtext">#B2B2B2</color>
 </resources>

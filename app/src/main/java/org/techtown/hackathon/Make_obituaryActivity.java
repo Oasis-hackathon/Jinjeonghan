@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import com.google.firebase.database.DatabaseReference;
@@ -52,7 +53,7 @@ public class Make_obituaryActivity extends AppCompatActivity {
         String id = intent.getStringExtra("id");
         String name = intent.getStringExtra("name");
 
-        Button backbtn = findViewById(R.id.button);
+        ImageView backbtn = findViewById(R.id.ob_go_back);
         backbtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -80,7 +81,7 @@ public class Make_obituaryActivity extends AppCompatActivity {
         });
 
         // 제작버튼
-        Button btn_finish = findViewById(R.id.ob_finish);
+        ImageView btn_finish = findViewById(R.id.ob_finish);
         btn_finish.setOnClickListener(new View.OnClickListener() {
 
             @Override

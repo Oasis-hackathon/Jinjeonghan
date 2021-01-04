@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <LinearLayout
@@ -10,20 +11,24 @@
         android:layout_gravity="center"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/button"
+        <ImageView
+            android:id="@+id/ob_go_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="뒤로가기"/>
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            app:srcCompat="@drawable/leftallow" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginHorizontal="70dp"
-            android:text="부고 제작" />
+            android:layout_marginHorizontal="110dp"
+            android:fontFamily="@font/kopubworld_dotum_bold"
+            android:text="부고 제작"
+            android:textColor="@color/Boldviewtext"
+            android:textSize="18sp" />
     </LinearLayout>
 
     <ScrollView
@@ -33,7 +38,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -46,56 +51,54 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="상주" />
+                    android:fontFamily="@font/kopubworld_dotum_bold"
+                    android:text="상주"
+                    android:textColor="@color/Boldviewtext"
+                    android:textSize="14sp" />
 
                 <Spinner
                     android:id="@+id/spinner_rg"
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
+                    android:layout_width="390dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/write_text"></Spinner>
+                    android:background="@drawable/ob_make_edittext"></Spinner>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/Name_t_editText"
                         android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/write_text"
+                        android:background="@drawable/ob_make_edittext"
+                        android:fontFamily="@font/kopubworld_dotum_light"
                         android:gravity="center"
-                        android:hint="이름" />
+                        android:hint="이름"
+                        android:textSize="14sp" />
 
                     <EditText
                         android:id="@+id/Number_t_editText"
                         android:layout_width="40dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="2"
-                        android:background="@drawable/write_text"
+                        android:background="@drawable/ob_make_edittext"
+                        android:fontFamily="@font/kopubworld_dotum_light"
                         android:gravity="center"
-                        android:hint="전화번호" />
+                        android:hint="전화번호"
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
             </LinearLayout>
-
-            <ImageView
-                android:id="@+id/write_line2"
-                android:layout_width="match_parent"
-                android:layout_height="7dp"
-                android:layerType="software"
-                android:src="@drawable/line" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -108,46 +111,45 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="고인" />
+                    android:fontFamily="@font/kopubworld_dotum_bold"
+                    android:text="고인"
+                    android:textColor="@color/Boldviewtext"
+                    android:textSize="14sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/Name_d_editText"
                         android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/write_text"
+                        android:background="@drawable/ob_make_edittext"
+                        android:fontFamily="@font/kopubworld_dotum_light"
                         android:gravity="center"
-                        android:hint="이름" />
+                        android:hint="이름"
+                        android:textSize="14sp" />
 
                     <EditText
                         android:id="@+id/age_d_editText"
                         android:layout_width="40dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="2"
-                        android:background="@drawable/write_text"
+                        android:background="@drawable/ob_make_edittext"
+                        android:fontFamily="@font/kopubworld_dotum_light"
                         android:gravity="center"
-                        android:hint="연세" />
+                        android:hint="연세"
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
             </LinearLayout>
-
-            <ImageView
-                android:id="@+id/write_line3"
-                android:layout_width="match_parent"
-                android:layout_height="7dp"
-                android:layerType="software"
-                android:src="@drawable/line" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -160,35 +162,32 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="임종일" />
+                    android:fontFamily="@font/kopubworld_dotum_bold"
+                    android:text="임종일"
+                    android:textColor="@color/Boldviewtext"
+                    android:textSize="14sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/date_editText"
                         android:layout_width="40dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/write_text"
+                        android:background="@drawable/ob_make_edittext"
+                        android:fontFamily="@font/kopubworld_dotum_light"
                         android:gravity="center"
-                        android:hint="날짜" />
+                        android:hint="날짜"
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
             </LinearLayout>
-
-            <ImageView
-                android:id="@+id/write_line4"
-                android:layout_width="match_parent"
-                android:layout_height="7dp"
-                android:layerType="software"
-                android:src="@drawable/line" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -201,57 +200,58 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="발인일" />
+                    android:fontFamily="@font/kopubworld_dotum_bold"
+                    android:text="발인일"
+                    android:textColor="@color/Boldviewtext"
+                    android:textSize="14sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/date_editText3"
                         android:layout_width="40dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/write_text"
+                        android:background="@drawable/ob_make_edittext"
+                        android:fontFamily="@font/kopubworld_dotum_light"
                         android:gravity="center"
-                        android:hint="년" />
+                        android:hint="년"
+                        android:textSize="14sp" />
 
                     <EditText
                         android:id="@+id/date_editText4"
                         android:layout_width="40dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/write_text"
+                        android:background="@drawable/ob_make_edittext"
+                        android:fontFamily="@font/kopubworld_dotum_light"
                         android:gravity="center"
-                        android:hint="월" />
+                        android:hint="월"
+                        android:textSize="14sp" />
 
                     <EditText
                         android:id="@+id/date_editText2"
                         android:layout_width="40dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/write_text"
+                        android:background="@drawable/ob_make_edittext"
+                        android:fontFamily="@font/kopubworld_dotum_light"
                         android:gravity="center"
-                        android:hint="일" />
+                        android:hint="일"
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
             </LinearLayout>
-
-            <ImageView
-                android:id="@+id/write_line5"
-                android:layout_width="match_parent"
-                android:layout_height="7dp"
-                android:layerType="software"
-                android:src="@drawable/line" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -264,35 +264,43 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
+                    android:textColor="@color/Boldviewtext"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/kopubworld_dotum_bold"
                     android:text="장례식장" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
-                    android:orientation="horizontal">
+                    android:fontFamily="@font/kopubworld_dotum_bold"
+                    android:orientation="horizontal"
+                    android:textColor="@color/Boldviewtext"
+                    android:textSize="14sp">
 
                     <EditText
                         android:id="@+id/location_editText"
                         android:layout_width="40dp"
-                        android:layout_height="20dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/write_text"
+                        android:background="@drawable/ob_make_edittext"
+                        android:fontFamily="@font/kopubworld_dotum_light"
                         android:gravity="center"
-                        android:hint="장소" />
+                        android:hint="장소"
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
             </LinearLayout>
 
-            <Button
+            <ImageView
                 android:id="@+id/ob_finish"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:text="제작" />
+                android:adjustViewBounds="true"
+                app:srcCompat="@drawable/ob_make_btn2" />
 
         </LinearLayout>
     </ScrollView>
