@@ -27,6 +27,8 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+
         //아이디 값 찾아주기
         et_id=findViewById(R.id.et_id);
         et_pass=findViewById(R.id.et_pass);
