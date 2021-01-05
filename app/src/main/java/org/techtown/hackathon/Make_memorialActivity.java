@@ -76,7 +76,7 @@ public class Make_memorialActivity extends AppCompatActivity {
         String id = intent.getStringExtra("id");
         String name = intent.getStringExtra("name");
 
-        Button backbtn = findViewById(R.id.go_back);
+        ImageView backbtn = findViewById(R.id.go_back);
         backbtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -130,7 +130,7 @@ public class Make_memorialActivity extends AppCompatActivity {
         });
 
         // 제작버튼
-        Button btn_finish = findViewById(R.id.me_finish);
+        ImageView btn_finish = findViewById(R.id.me_finish);
         btn_finish.setOnClickListener(new View.OnClickListener() {
 
             @Override

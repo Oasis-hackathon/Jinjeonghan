@@ -4,23 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/background"
     android:orientation="vertical"
     tools:context=".Fragment_home">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="10dp">
 
         <TextView
             android:id="@+id/memorial_logo"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginLeft="150dp"
+            android:fontFamily="@font/kopubworld_dotum_bold"
             android:text="추모관"
-            android:textSize="25sp" />
+            android:textColor="@color/Boldviewtext"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView28"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="150dp"
+            android:src="@drawable/me_search" />
 
     </LinearLayout>
 
@@ -45,16 +55,16 @@
                     android:layout_margin="10dp"
                     android:fontFamily="@font/kopubworld_dotum_bold"
                     android:text="나의 추모관"
-                    android:textColor="@color/jinBlack"
-                    android:textSize="20dp" />
+                    android:textColor="@color/Boldviewtext"
+                    android:textSize="14sp" />
 
                 <ImageView
-                    android:id="@+id/me_imageView1"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
+                    android:id="@+id/imageView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    android:src="@drawable/ic_launcher_foreground" />
+                    android:src="@drawable/allow" />
 
             </LinearLayout>
 
@@ -71,10 +81,12 @@
 
                     <ImageView
                         android:id="@+id/make_memorial"
-                        android:layout_width="150dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:src="@drawable/ic_launcher_foreground" />
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/me_puls" />
+
 
                     <TextView
                         android:id="@+id/textView5"
@@ -82,7 +94,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:fontFamily="@font/kopubworld_dotum_bold"
-                        android:text="추모관 만들기" />
+                        android:text="추모관 만들기"
+                        android:textColor="@color/mediumviewtext"
+                        android:textSize="14sp" />
 
                     <TextView
                         android:id="@+id/textView6"
@@ -91,11 +105,100 @@
                         android:layout_marginLeft="10dp"
                         android:fontFamily="@font/kopubworld_dotum_light"
                         android:text="추모관을 제작하여 추억을 공유하세요"
-                        android:textSize="10dp" />
+                        android:textColor="@color/mediumviewtext"
+                        android:textSize="8sp" />
                 </LinearLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_mymemo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="176dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/me_textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/kopubworld_dotum_bold"
+                    android:text="공인 추모관"
+                    android:textColor="@color/Boldviewtext"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/imageView61"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/allow" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"></LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_mymemo_second"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/me_textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/kopubworld_dotum_bold"
+                    android:text="역사 추모관"
+                    android:textColor="@color/Boldviewtext"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/imageView62"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/allow" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"></LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_mymemo_thrid"
                     android:layout_width="wrap_content"
                     android:layout_height="176dp">
 

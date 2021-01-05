@@ -5,33 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    >
+    android:background="@color/background">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/ob_go_back2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/leftallow" />
 
         <TextView
             android:id="@+id/obituary_logo2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="만든 부고"
-            android:textSize="25sp" />
+            android:layout_marginLeft="120dp"
+            android:fontFamily="@font/kopubworld_dotum_bold"
+            android:text="부고 제작"
+            android:textColor="@color/Boldviewtext"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/gray">
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/back_color"
@@ -44,35 +53,40 @@
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    android:adjustViewBounds="true"
+                    android:layout_marginTop="20dp"
+                    app:srcCompat="@drawable/ob_image2" />
 
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
-                    android:fontFamily="@font/kopubworld_dotum_medium"
+                    android:fontFamily="@font/kopubworld_dotum_bold"
                     android:text="이름"
-                    android:textSize="20sp" />
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="30dp"
-                    android:fontFamily="@font/kopubworld_dotum_light"
+                    android:fontFamily="@font/kopubworld_dotum_bold"
+                    android:textColor="#000000"
+                    android:textSize="15sp"
                     android:text="별세하셨기에 삼가 알려드립니다." />
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/imageView22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    app:srcCompat="@drawable/ic_launcher_foreground" />
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/ob_image1" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="178dp">
+                    android:layout_height="140dp">
 
                     <TextView
                         android:id="@+id/d_location_Text"
@@ -80,8 +94,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:layout_weight="2"
+                        android:fontFamily="@font/kopubworld_dotum_light"
                         android:gravity="center"
-                        android:hint="장소"
+                        android:text="장소"
+                        android:textColor="#000000"
+                        android:textSize="13sp"
                         app:layout_constraintStart_toStartOf="@+id/guideline2"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -90,8 +107,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
+                        android:fontFamily="@font/kopubworld_dotum_bold"
                         android:gravity="center"
-                        android:hint="빈소"
+                        android:text="빈소"
+                        android:textColor="#000000"
+                        android:textSize="13sp"
                         app:layout_constraintStart_toStartOf="@+id/guideline"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -99,10 +119,13 @@
                         android:id="@+id/t_Text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="32dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/kopubworld_dotum_bold"
                         android:gravity="center"
-                        android:hint="상주"
+                        android:text="상주"
+                        android:textColor="#000000"
+                        android:textSize="13sp"
                         app:layout_constraintStart_toStartOf="@+id/guideline"
                         app:layout_constraintTop_toBottomOf="@+id/d_Text" />
 
@@ -110,10 +133,13 @@
                         android:id="@+id/name_t_Text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="32dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="2"
+                        android:fontFamily="@font/kopubworld_dotum_light"
                         android:gravity="center"
-                        android:hint="상주 이름"
+                        android:text="상주 이름"
+                        android:textColor="#000000"
+                        android:textSize="13sp"
                         app:layout_constraintStart_toStartOf="@+id/guideline2"
                         app:layout_constraintTop_toBottomOf="@+id/d_day_Text" />
 
@@ -121,9 +147,12 @@
                         android:id="@+id/d_Text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="32dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/kopubworld_dotum_bold"
                         android:gravity="center"
-                        android:hint="발인"
+                        android:text="발인"
+                        android:textColor="#000000"
+                        android:textSize="13sp"
                         app:layout_constraintStart_toStartOf="@+id/guideline"
                         app:layout_constraintTop_toBottomOf="@+id/location_Text" />
 
@@ -131,10 +160,13 @@
                         android:id="@+id/d_day_Text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="32dp"
+                        android:layout_marginTop="10dp"
                         android:layout_weight="2"
+                        android:fontFamily="@font/kopubworld_dotum_light"
                         android:gravity="center"
-                        android:hint="발인 날짜"
+                        android:text="발인 날짜"
+                        android:textColor="#000000"
+                        android:textSize="13sp"
                         app:layout_constraintStart_toStartOf="@+id/guideline2"
                         app:layout_constraintTop_toBottomOf="@+id/d_location_Text" />
 
@@ -169,7 +201,8 @@
                     android:layout_margin="10dp"
                     android:fontFamily="@font/kopubworld_dotum_bold"
                     android:text="색상 변경"
-                    android:textSize="18sp" />
+                    android:textColor="@color/Boldviewtext"
+                    android:textSize="14sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -204,29 +237,23 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal"
+                    android:layout_margin="10dp"
                     android:gravity="center"
-                    android:layout_margin="10dp">
+                    android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/button2"
+                    <ImageView
+                        android:id="@+id/imageView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="10dp"
-                        android:backgroundTint="@color/yellow"
-                        android:fontFamily="@font/kopubworld_dotum_medium"
-                        android:textColor="@color/jinBlack"
-                        android:text="이미지저장" />
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ob_btn_store" />
 
-                    <Button
-                        android:id="@+id/button3"
+                    <ImageView
+                        android:id="@+id/imageView23"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:backgroundTint="@color/yellow"
-                        android:fontFamily="@font/kopubworld_dotum_medium"
-                        android:textColor="@color/jinBlack"
-                        android:text="공유하기" />
+                        android:adjustViewBounds="true"
+                        app:srcCompat="@drawable/ob_btn_share" />
                 </LinearLayout>
 
             </LinearLayout>

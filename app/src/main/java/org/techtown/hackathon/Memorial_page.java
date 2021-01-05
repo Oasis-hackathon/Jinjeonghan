@@ -49,6 +49,6 @@ public class Memorial_page extends AppCompatActivity {
         me_d_name.setText("故 " + d_name + " 추모관");
         me_date.setText(d_brith + "~" + d_day);
         me_phrases.setText(phrases);
-        me_profile.setImageResource(R.drawable.temp_image);
+        me_profile.setImageResource(R.drawable.dog);
     }
 }

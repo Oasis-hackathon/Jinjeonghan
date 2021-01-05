@@ -35,64 +35,73 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
-                android:id="@+id/profile_back"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <ImageView
+                    android:id="@+id/imageView42"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:srcCompat="@tools:sample/avatars" />
+
+                <ImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView43"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:srcCompat="@drawable/profile_text" />
 
                 <TextView
-                    android:id="@+id/memo_page_BGM"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/memo_page_date"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="30dp"
-                    android:background="@drawable/ob_make_edittext"
-                    android:fontFamily="@font/kopubworld_dotum_medium"
+                    android:layout_marginTop="65dp"
+                    android:fontFamily="@font/kopubworld_dotum_light"
                     android:gravity="center"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="20dp"
-                    android:paddingBottom="10dp"
-                    android:text="BGM"
-                    android:textColor="@color/jinBlack" />
+                    android:text="날짜"
+                    android:textSize="15sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/memo_page_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="40dp"
-                    android:orientation="vertical">
+                    android:fontFamily="@font/kopubworld_dotum_bold"
+                    android:gravity="center"
+                    android:text="이름"
+                    android:textSize="26sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/memo_page_name"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/kopubworld_dotum_bold"
-                        android:gravity="center"
-                        android:text="이름"
-                        android:textSize="26sp" />
-
-                    <TextView
-                        android:id="@+id/memo_page_date"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/kopubworld_dotum_light"
-                        android:gravity="center"
-                        android:text="날짜"
-                        android:textSize="15sp" />
-
-                    <ImageView
-                        android:id="@+id/profile_image"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center"
-                        android:layout_margin="20dp"
-                        app:srcCompat="@drawable/profile_text" />
-
-                </LinearLayout>
-
-            </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -184,7 +193,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
@@ -197,48 +206,60 @@
                         android:text="프로필"
                         android:textColor="@color/jinBlack" />
 
-                    <TextView
-                        android:id="@+id/memo_page_phrases"
-                        android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/profile_write"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/profile_box"
-                        android:fontFamily="@font/kopubworld_dotum_light"
-                        android:gravity="center"
-                        android:paddingLeft="50dp"
-                        android:paddingTop="30dp"
-                        android:paddingRight="20dp"
-                        android:paddingBottom="30dp"
-                        android:text="프로필을 작성해주세요."
-                        android:textColor="@color/jinBlack" />
+                        android:adjustViewBounds="true"
+                        tools:srcCompat="@tools:sample/avatars" />
+
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <TextView
-                        android:id="@+id/textView14"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:fontFamily="@font/kopubworld_dotum_medium"
-                        android:text="편지쓰기"
-                        android:textColor="@color/jinBlack" />
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/memo_page_write"
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/kopubworld_dotum_medium"
+                            android:text="편지쓰기"
+                            android:textColor="@color/jinBlack" />
+
+                        <ImageView
+                            android:id="@+id/imageView41"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/allow" />
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/profile_box"
-                        android:fontFamily="@font/kopubworld_dotum_light"
-                        android:gravity="center"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="30dp"
-                        android:paddingRight="20dp"
-                        android:paddingBottom="30dp"
-                        android:text="저장된 편지글이 없습니다."
-                        android:textColor="@color/jinBlack" />
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/letter_write1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="130dp"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <ImageView
+                            android:id="@+id/letter_write2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="130dp"
+                            tools:srcCompat="@tools:sample/avatars" />
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -255,19 +276,33 @@
                         android:text="추억앨범"
                         android:textColor="@color/jinBlack" />
 
-                    <TextView
-                        android:id="@+id/memo_page_al"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/profile_box"
-                        android:fontFamily="@font/kopubworld_dotum_light"
-                        android:gravity="center"
-                        android:paddingLeft="20dp"
-                        android:paddingTop="30dp"
-                        android:paddingRight="20dp"
-                        android:paddingBottom="30dp"
-                        android:text="저장된 앨범이 없습니다."
-                        android:textColor="@color/jinBlack" />
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/albom1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <ImageView
+                            android:id="@+id/albom2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <ImageView
+                            android:id="@+id/albom3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            tools:srcCompat="@tools:sample/avatars" />
+                    </LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>

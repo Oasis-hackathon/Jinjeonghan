@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -28,6 +29,16 @@ public class Obituary_page extends AppCompatActivity {
         String d_go_month = intent.getStringExtra("d_go_month");
         String d_go_day = intent.getStringExtra("d_go_day");
         String location = intent.getStringExtra("location");
+
+        ImageView backbtn = findViewById(R.id.ob_go_back2);
+        backbtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_OK, intent);
+                finish();
+            }
+        });
 
         TextView tv_name = findViewById(R.id.name_t_Text);
         TextView tvd_top = findViewById(R.id.textView2);

@@ -63,6 +63,8 @@
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
                     android:layout_marginEnd="10dp"
+                    android:textAlignment="center"
+                    android:paddingLeft="170dp"
                     android:background="@drawable/ob_make_edittext"></Spinner>
 
                 <LinearLayout

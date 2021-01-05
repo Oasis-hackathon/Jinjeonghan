@@ -14,22 +14,22 @@ import java.util.ArrayList;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-public class Memorial_RecyclerAdapter extends RecyclerView.Adapter<Memorial_RecyclerAdapter.ViewHolder> {
-    private ArrayList<Memorial_RecyclerItem> mData;
+public class Memorial_RecyclerAdapter_public extends RecyclerView.Adapter<Memorial_RecyclerAdapter_public.ViewHolder> {
+    private ArrayList<Memorial_RecyclerItem_public> mData;
 
     // 생성자에서 데이터 리스트 객체를 전달받음.
-    public Memorial_RecyclerAdapter(ArrayList<Memorial_RecyclerItem> list) {
+    public Memorial_RecyclerAdapter_public(ArrayList<Memorial_RecyclerItem_public> list) {
         mData = list ;
     }
 
     // onCreateViewHolder() - 아이템 뷰를 위한 뷰홀더 객체 생성하여 리턴.
     @Override
-    public Memorial_RecyclerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public Memorial_RecyclerAdapter_public.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext() ;
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) ;
 
         View view = inflater.inflate(R.layout.memorial_item, parent, false) ;
-        Memorial_RecyclerAdapter.ViewHolder vh = new Memorial_RecyclerAdapter.ViewHolder(view) ;
+        Memorial_RecyclerAdapter_public.ViewHolder vh = new Memorial_RecyclerAdapter_public.ViewHolder(view) ;
 
         return vh ;
     }
@@ -38,10 +38,9 @@ public class Memorial_RecyclerAdapter extends RecyclerView.Adapter<Memorial_Recy
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        Memorial_RecyclerItem item = mData.get(position) ;
+        Memorial_RecyclerItem_public item = mData.get(position) ;
 
-        holder.image.setImageResource(R.drawable.dog);
-        //Glide.with(holder.itemView).load(item.getImage_url()).into(holder.image);
+        Glide.with(holder.itemView).load(item.getPreview()).into(holder.image);
         holder.top.setText("故 " + item.getD_name()); ;
         holder.bottom.setText(item.getD_brith() + "~" + item.getD_day()) ;
     }
@@ -73,23 +72,35 @@ public class Memorial_RecyclerAdapter extends RecyclerView.Adapter<Memorial_Recy
                     int pos = getAdapterPosition();
                     if(pos != RecyclerView.NO_POSITION) {
                         // 데이터 리스트로부터 아이템 데이터 참조
-                        Memorial_RecyclerItem item = mData.get(pos);
-                        String color = item.getColor();
+                        Memorial_RecyclerItem_public item = mData.get(pos);
+                        String preview = item.getPreview();
                         String d_brith = item.getD_brith();
                         String d_day = item.getD_day();
                         String d_name = item.getD_name();
                         String image_url = item.getImage_url();
-                        String phrases = item.getPhrases();
+                        String albom1 = item.getAlbom1();
+                        String albom2 = item.getAlbom2();
+                        String albom3 = item.getAlbom3();
+                        String letter_write1 = item.getLetter_write1();
+                        String letter_write2 = item.getLetter_write2();
+                        String profile_write = item.getProfile_write();
+                        String profile_image = item.getProfile_image();
                         String song = item.getSong();
 
-                        Intent intent = new Intent(v.getContext(), Memorial_page.class);
-                        intent.putExtra("color", ""+color);
+                        Intent intent = new Intent(v.getContext(), Memorial_page_public.class);
+                        intent.putExtra("preview", ""+preview);
                         intent.putExtra("d_brith", ""+d_brith);
                         intent.putExtra("d_day", ""+d_day);
                         intent.putExtra("d_name", ""+d_name);
                         intent.putExtra("image_url", ""+image_url);
-                        intent.putExtra("phrases", ""+phrases);
+                        intent.putExtra("albom1", ""+albom1);
+                        intent.putExtra("albom2", ""+albom2);
+                        intent.putExtra("albom3", ""+albom3);
+                        intent.putExtra("letter_write1", ""+letter_write1);
+                        intent.putExtra("letter_write2", ""+letter_write2);
+                        intent.putExtra("profile_write", ""+profile_write);
                         intent.putExtra("song", ""+song);
+                        intent.putExtra("profile_image", ""+profile_image);
 
                         v.getContext().startActivity(intent);
                     }

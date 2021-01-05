@@ -43,9 +43,6 @@ public class MainActivity extends AppCompatActivity {
         bundle.putString("id", userID);
         bundle.putString("name", userName);
         fragmentHome.setArguments(bundle);// 정보 보내기
-        //fragmentObituary.setArguments(bundle);
-
-
 
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragmentHome).commit();
 
@@ -90,15 +87,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    // 프래그먼트 교체 -> 하단바가 안바뀌는 문제
-    /*public void setFragment(int n) {
-        fragmentManager =  getSupportFragmentManager();
-        fragmentTransaction = fragmentManager.beginTransaction();
-        switch(n) {
-            case 0:
-                fragmentTransaction.replace(R.id.container, fragmentObituary).commit();
-                break;
-        }
-    }*/
 }

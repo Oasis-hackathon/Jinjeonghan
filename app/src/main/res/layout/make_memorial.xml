@@ -3,30 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/background">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
 
-        <Button
+        <ImageView
             android:id="@+id/go_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:backgroundTint="@color/gray"
-            android:text="뒤로가기" />
+            android:layout_margin="20dp"
+            app:srcCompat="@drawable/leftallow" />
 
         <TextView
             android:id="@+id/make_memorial_logo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginHorizontal="50dp"
+            android:layout_marginHorizontal="100dp"
             android:fontFamily="@font/kopubworld_dotum_bold"
             android:text="추모관 제작"
-            android:textSize="25sp" />
+            android:textColor="@color/Boldviewtext"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
@@ -50,15 +51,17 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_gravity="center"
-                    app:srcCompat="@drawable/write_text" />
+                    app:srcCompat="@drawable/profile" />
 
                 <TextView
                     android:id="@+id/change_image"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:fontFamily="@font/kopubworld_dotum_medium"
+                    android:fontFamily="@font/kopubworld_dotum_bold"
                     android:gravity="center"
+                    android:textSize="14sp"
+                    android:textColor="@color/yellow2"
                     android:text="대표 이미지 바꾸기" />
             </LinearLayout>
 
@@ -75,22 +78,22 @@
                     android:layout_margin="10dp"
                     android:fontFamily="@font/kopubworld_dotum_bold"
                     android:text="고인 정보"
-                    android:textSize="18sp" />
+                    android:textColor="@color/Boldviewtext"
+                    android:textSize="14sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <EditText
                         android:id="@+id/make_Name_d_editText"
                         android:layout_width="20dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/write_text"
+                        android:background="@drawable/ob_make_edittext"
                         android:fontFamily="@font/kopubworld_dotum_light"
                         android:gravity="center"
                         android:hint="이름" />
@@ -98,12 +101,13 @@
                     <EditText
                         android:id="@+id/make_bri_d_editText"
                         android:layout_width="40dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="2"
-                        android:background="@drawable/write_text"
+                        android:background="@drawable/ob_make_edittext"
                         android:gravity="center"
+                        android:fontFamily="@font/kopubworld_dotum_light"
                         android:hint="생년월일" />
 
                 </LinearLayout>
@@ -126,12 +130,13 @@
                     <EditText
                         android:id="@+id/make_d_date_editText"
                         android:layout_width="40dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="2"
-                        android:background="@drawable/write_text"
+                        android:background="@drawable/ob_make_edittext"
                         android:gravity="center"
+                        android:fontFamily="@font/kopubworld_dotum_light"
                         android:hint="임종일" />
 
                 </LinearLayout>
@@ -151,7 +156,8 @@
                     android:layout_margin="10dp"
                     android:fontFamily="@font/kopubworld_dotum_bold"
                     android:text="추모관 대표 문구"
-                    android:textSize="18sp" />
+                    android:textColor="@color/Boldviewtext"
+                    android:textSize="14sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -162,11 +168,11 @@
                     <EditText
                         android:id="@+id/make_pre_editText"
                         android:layout_width="20dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/write_text"
+                        android:background="@drawable/ob_make_edittext"
                         android:fontFamily="@font/kopubworld_dotum_light"
                         android:gravity="center"
                         android:hint="추모관을 대표하는 문구를 입력해주세요" />
@@ -188,7 +194,8 @@
                     android:layout_margin="10dp"
                     android:fontFamily="@font/kopubworld_dotum_bold"
                     android:text="배경 음악"
-                    android:textSize="18sp" />
+                    android:textColor="@color/Boldviewtext"
+                    android:textSize="14sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -199,11 +206,11 @@
                     <EditText
                         android:id="@+id/make_song_editText"
                         android:layout_width="20dp"
-                        android:layout_height="25dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:layout_weight="1"
-                        android:background="@drawable/write_text"
+                        android:background="@drawable/ob_make_edittext"
                         android:fontFamily="@font/kopubworld_dotum_light"
                         android:gravity="center"
                         android:hint="곡, 앨범, 아티스트 명으로 검색" />
@@ -225,7 +232,8 @@
                     android:layout_margin="10dp"
                     android:fontFamily="@font/kopubworld_dotum_bold"
                     android:text="배경 색상"
-                    android:textSize="18sp" />
+                    android:textColor="@color/Boldviewtext"
+                    android:textSize="14sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -259,14 +267,14 @@
 
             </LinearLayout>
 
-            <Button
+
+            <ImageView
                 android:id="@+id/me_finish"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="10dp"
-                android:backgroundTint="@color/gray"
-                android:text="완료" />
+                app:srcCompat="@drawable/me_finish" />
 
         </LinearLayout>
     </ScrollView>

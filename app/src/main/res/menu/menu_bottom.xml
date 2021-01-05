@@ -6,30 +6,30 @@
         android:id="@+id/tab1"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_email"
+        android:icon="@drawable/bar_home_logo"
         android:title="홈" />
     <item
         android:id="@+id/tab2"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_info"
+        android:icon="@drawable/bar_ob_logo"
         android:title="부고" />
     <item
         android:id="@+id/tab3"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_map"
+        android:icon="@drawable/bar_me_logo"
         android:title="추모관" />
     <item
         android:id="@+id/tab4"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_map"
+        android:icon="@drawable/bar_cal_logo"
         android:title="일정" />
     <item
         android:id="@+id/tab5"
         app:showAsAction="ifRoom"
         android:enabled="true"
-        android:icon="@android:drawable/ic_dialog_map"
-        android:title="마이페이지" />
+        android:icon="@drawable/bar_mypage_logo"
+        android:title="마이 페이지" />
 </menu>
